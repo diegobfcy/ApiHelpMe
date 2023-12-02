@@ -3,7 +3,9 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para permitir solicitudes desde otros dominios
-
+@app.route('/')
+def index():
+    return 'Hello, World!'
 @app.route("/location", methods=["POST"])
 def location():
     try:
