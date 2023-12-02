@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app)  # Habilita CORS para permitir solicitudes desde otros dominios
 
 # Variable global para almacenar la última ubicación
-last_location = {'latitude': None, 'longitude': None}
+last_location = {'latitude': 0.0, 'longitude': 0.0}
 
 @app.route('/')
 def index():
